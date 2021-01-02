@@ -1,7 +1,7 @@
 %git clone https://github.com/liantze/AltaCV.git CV
 %http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf
 %pdflatex -> biber -> pdflatex -> pdflatex
-\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{AltaCV/altacv}
 \newif\ifEN\ENfalse
 \newcommand{\huen}[2]{\ifEN#2\else#1\fi}
 \ifEN
@@ -65,7 +65,7 @@
 		\email{tasi.gabi97@gmail.com}
 		\phone{+36 70 660 4792}
 		\linkedin{tasnadigabor}
-		\github{tasigabi97/traffic}
+		\github{tasigabi97/cv}
 	}
 	\makecvheader
 	%\AtBeginEnvironment{itemize}{\small}
