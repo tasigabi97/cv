@@ -1,0 +1,147 @@
+%git clone https://github.com/liantze/AltaCV.git CV
+%http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf
+%pdflatex -> biber -> pdflatex -> pdflatex
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\newif\ifEN\ENfalse
+\newcommand{\huen}[2]{\ifEN#2\else#1\fi}
+\ifEN
+\else
+%Magyar nyelvi támogatás (Babel 3.7 vagy későbbi kell!)
+\def\magyarOptions{defaults=hu-min}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}% ékezetes szavak automatikus elválasztásához
+\fi
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\usepackage{paracol}
+\ifxetexorluatex
+% If using xelatex or lualatex:
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\else
+% If using pdflatex:
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\fi
+% Change the colours if you want to
+\definecolor{szajam}{HTML}{693632}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{517fb0}%Nagy cimek
+\definecolor{PastelRed}{HTML}{24385d}%egyetemek diagram nyelvkorok idezet
+\definecolor{GoldenEarth}{HTML}{d6b397}%vonalak
+\colorlet{name}{szajam}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+\NewInfoField{locationandmailaddress}{\faMapMarker/\faEnvelope}
+\NewInfoField{birthday}{\faHeartbeat}
+\begin{document}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\name{\huen{Tasnádi Gábor}{Gábor Tasnádi}}
+	\tagline{\faKeyboard \huen{Programtervező}{Software Engineer}}
+	\photoL{3.5cm}{1}	
+	\personalinfo{%
+		\birthday{1997. 02. 04.}
+		\locationandmailaddress{\huen{1115 Budapest, Ballagi Mór utca 3. 2/14.}{1115 Budapest, Ballagi Mór street 3. 2/14.}}
+		\email{tasi.gabi97@gmail.com}
+		\phone{+36 70 660 4792}
+		\linkedin{tasnadigabor}
+		\github{tasigabi97/traffic}
+	}
+	\makecvheader
+	%\AtBeginEnvironment{itemize}{\small}
+	\medskip
+	\medskip				
+	\columnratio{0.6}
+	\begin{paracol}{2}
+		\cvsection{\huen{szakmai tapasztalat}{work experience}}		
+		\cvevent{\huen{Szoftverfejlesztő}{Software Developer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{2019. 03. 01. -- 2019. 06. 30.}{Szeged}
+		Mély tanuló módszereket fejlesztettem arcképek szuper-rezolúciójára \textit{(biztonságtechnológiai rendszerhez)}.\\
+		\divider
+		\cvevent{\huen{Tanszéki mérnök}{Engineer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{2020. 09. 23. -- 2021. 01. 22.}{Szeged}
+		Az egyetem informatikai karát népszerűsítettem egy digitális képfeldolgozó program készítésével \textit{(a pályázat címe: A Szegedi Tudományegyetem készségfejlesztő és kommunikációs programjainak megvalósítása a felsőoktatásba való bekerülés előmozdítására és az MTMI szakok népszerűsítésére)}.\\		
+		A programom megszámolta, lokalizálta és azonosította a közúti közlekedés szereplőit – a róluk készített webkamerás felvételek alapján. Ezenkívül, az útburkolat jelölések automatikus kategorizálásával foglalkoztam.\\
+		\medskip		
+		\cvsection{\huen{Oktatás és képzés}{Education}}		
+		\cvevent{\huen{Programtervező informatikus BSc}{Bachelor of Computer Science}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{}{}
+		\textbf{\huen{Egyéb szabadon választott tárgyaim:}{arg2}}
+		\begin{itemize}[leftmargin=.25in]
+			\item  Summer School on Image Processing (2019)
+			\item \huen{Digitális topológia és matematikai morfológia}{arg2}
+			\item \huen{Bevezetés a mély tanulásba}{arg2}
+		\end{itemize}
+		\textbf{\huen{Szakdolgozatom témája:}{arg2}}\\
+		\noindent\hbox to .25in{}\huen{Mély konvolúciós hálók tanítása képfeldolgozási problémákra}{arg2}
+		\textbf{\huen{TDK-dolgozatom témája:}{arg2}}\\
+		\noindent\hbox to .25in{}\huen{Hiperreflektív pontok szegmentálása OCT felvételeken}{arg2}\\
+		\divider
+		\cvevent{Webdesigner}{József Attila Gimnázium}{2014. 04. 17. -- 2015. 02. 19.}{Monor}
+		124 órás akkreditált képzés (HTML\slash CSS\slash JavaScript) 95\%-os eredménnyel.\\	
+	\switchcolumn
+		\cvsection{\huen{Életfilozófiám}{My Life Philosophy}}
+		
+		\begin{quote}
+			``Bármikor beüthet a siker, ha kellő ideig kitartunk''
+		\end{quote}
+		
+		\cvsection{\huen{{\Large Amikre büszke vagyok}}{Most Proud of}}
+		
+		\cvachievement{\faTrophy}{\huen{TDK 2020. tavasz}{arg2}}{\huen{II. hely és Morgan Stanley különdíj}{arg2}}
+		\divider\\
+		\cvachievement{\faGraduationCap}{\huen{Jeles diploma}{arg2}}{\huen{196 kredit és 4,74-es átlag}{arg2}}\\
+		\medskip
+		\cvsection{\huen{{\Large hobbi és érdeklődés}}{arg2}}
+		\wheelchart{1cm}{0.2cm}{%
+			4/8em/accent!70/{\huen{Számítógépes\\látás}{Computer\\vision}},
+			3/8em/accent!40/{Raspberry Pi 4},
+			4/8em/accent!60/{Tensorflow},
+			1/8em/accent!30/{{\large \LaTeX}},
+			1/10em/accent/{Docker},
+			2/6em/accent!10/{Linux}
+		}
+		\cvsection{\huen{kompetenciák}{arg2}}
+		\cvtag{Latex}
+		\cvtag{MS Office}
+		\cvtag{Linux \& Windows}\\
+		\divider\smallskip\\
+		\cvtag{\huen{Jó kommunikációs készség}{arg2}}
+		\cvtag{\huen{Tanulékonyság}{arg2}}
+		\cvtag{\huen{Pontosság}{arg2}}
+		\cvtag{\huen{Rugalmasság}{arg2}}
+		\cvtag{\huen{Terhelhetőség}{arg2}}\\
+		\cvtag{\huen{Önálló munkára való képesség}{arg2}}\\
+		\divider\smallskip\\
+		\cvtag{\huen{Általános / orvosi képfeldolgozás ismerete}{arg2}}\\
+		\cvtag{\huen{Gépi tanulás ismerete}{arg2}}\\
+		\cvsection{\huen{Nyelvek}{Languages}}
+		\cvskill{\huen{Angol}{English} (B2\slash telc)}{3}
+		\divider
+		\cvskill{Python}{5}\smallskip
+		\cvskill{C\slash C++}{2}
+		\cvskill{C\#\slash Java}{2}
+		\cvskill{(PL/)SQL}{2}
+		\divider
+		\medskip		
+	\end{paracol}
+\end{document}
+
+ 
