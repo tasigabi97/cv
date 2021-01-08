@@ -54,6 +54,7 @@
 \addbibresource{sample.bib}
 \NewInfoField{locationandmailaddress}{\faMapMarker/\faEnvelope}
 \NewInfoField{birthday}{\faHeartbeat}
+\NewInfoField{languag}{\faLanguage}
 \hypersetup{hidelinks}
 \begin{document}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,12 +62,14 @@
 	\tagline{\faKeyboard \huen{Programtervező}{Software Engineer}}
 	\photoL{3.5cm}{1}	
 	\personalinfo{%
-		\birthday{1997. 02. 04.}
-		\locationandmailaddress{\huen{1115 Budapest, Ballagi Mór utca 3. 2/14.}{1115 Budapest, Ballagi Mór street 3. 2/14.}}
+		\birthday{\huen{1997. 02. 04.}{4 Feb 1997}}
+		\locationandmailaddress{\huen{1115 , Ballagi Mór utca 3. 2/14.}{3 Ballagi Mór Street, Budapest 1115}}
 		\email{tasi.gabi97@gmail.com}
 		\phone{+36 70 660 4792}
 		\linkedin{\href{https://www.linkedin.com/in/tasnadigabor/}{tasnadigabor}}
 		\github{\href{https://github.com/tasigabi97/cv}{tasigabi97/cv}}
+		\languag{\huen{\href{https://github.com/tasigabi97/cv/blob/main/cv_en.pdf}{angolul}}{\href{https://github.com/tasigabi97/cv/blob/main/cv_hu.pdf}{hungarian}}}
+		
 	}
 	\makecvheader
 	%\AtBeginEnvironment{itemize}{\small}
@@ -74,43 +77,43 @@
 	\medskip				
 	\columnratio{0.6}
 	\begin{paracol}{2}
-		\cvsection{\huen{szakmai tapasztalat}{work experience}}		
-		\cvevent{\huen{Szoftverfejlesztő}{Software Developer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{2019. 03. 01. -- 2019. 06. 30.}{Szeged}
-		Mély tanuló módszereket fejlesztettem arcképek szuper-rezolúciójára \textit{(biztonságtechnológiai rendszerhez)}.\\
+		\cvsection{\huen{szakmai tapasztalat}{professional experience}}		
+		\cvevent{\huen{Szoftverfejlesztő}{Software Developer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{\huen{2019. 03. 01. -- 2019. 06. 30.}{1 Mar 2019 -- 30 Jun 2019}}{Szeged}
+		\huen{Mély tanuló módszereket fejlesztettem arcképek szuper-rezolúciójára \textit{(biztonságtechnológiai rendszerhez)}.}{Developing deep learning methods for facial image super-resolution \textit{(for security systems)}.}\\
 		\divider
-		\cvevent{\huen{Tanszéki mérnök}{Engineer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{2020. 09. 23. -- 2021. 01. 22.}{Szeged \hfill \faGithub \href{https://github.com/tasigabi97/traffic}{tasigabi97/traffic}}
-		Az egyetem informatikai karát népszerűsítettem egy digitális képfeldolgozó program készítésével \textit{(a pályázat címe: A Szegedi Tudományegyetem készségfejlesztő és kommunikációs programjainak megvalósítása a felsőoktatásba való bekerülés előmozdítására és az MTMI szakok népszerűsítésére)}.\\		
-		A programom megszámolta, lokalizálta és azonosította a közúti közlekedés szereplőit – a róluk készített webkamerás felvételek alapján. Ezenkívül, az útburkolat jelölések automatikus kategorizálásával foglalkoztam.\\
+		\cvevent{\huen{Tanszéki mérnök}{Engineer}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{\huen{2020. 09. 23. -- 2021. 01. 22.}{23 Sep 2020 -- 22 Jan 2021}}{Szeged \hfill \faGithub \href{https://github.com/tasigabi97/traffic}{tasigabi97/traffic}}
+		\huen{Az egyetem informatikai karát népszerűsítettem egy digitális képfeldolgozó program készítésével \textit{(a pályázat címe: A Szegedi Tudományegyetem készségfejlesztő és kommunikációs programjainak megvalósítása a felsőoktatásba való bekerülés előmozdítására és az MTMI szakok népszerűsítésére)}.\\		
+			A programom megszámolta, lokalizálta és azonosította a közúti közlekedés szereplőit – a róluk készített webkamerás felvételek alapján. Ezenkívül, az útburkolat jelölések automatikus kategorizálásával foglalkoztam.}{I promoted the Faculty of Informatics of the University with the creation of a digital image processing program \textit{(title of the competition: Promotion of the Faculty of Mathematics, Technical Sciences and Informatics of the University of Szeged)}.\\		
+			My program is able to count, localize and identify the actors of road traffic based on their webcam footage. In addition, I dealt with the automatic categorization of pavement markers.}\\
 		\medskip		
 		\cvsection{\huen{Oktatás és képzés}{Education}}		
 		\cvevent{\huen{Programtervező informatikus BSc}{Bachelor of Computer Science}}{\huen{Szegedi Tudományegyetem}{University of Szeged}}{}{}
-		\textbf{\huen{Egyéb szabadon választott tárgyaim:}{arg2}}
+		\textbf{\huen{Egyéb szabadon választott tárgyaim}{Additional optional subjects}:}
 		\begin{itemize}[leftmargin=.25in]
 			\item  Summer School on Image Processing (2019)
-			\item \huen{Digitális topológia és matematikai morfológia}{arg2}
-			\item \huen{Bevezetés a mély tanulásba}{arg2}
+			\item \huen{Digitális topológia és matematikai morfológia}{Digital Topology and Mathematical Morphology}
+			\item \huen{Bevezetés a mély tanulásba}{Introduction to Deep Learning}
 		\end{itemize}
-		\textbf{\huen{Szakdolgozatom témája:}{arg2}}\\
-		\noindent\hbox to .25in{}\huen{Mély konvolúciós hálók tanítása képfeldolgozási problémákra}{arg2}
-		\textbf{\huen{TDK-dolgozatom témája:}{arg2}}\\
-		\noindent\hbox to .25in{}\huen{Hiperreflektív pontok szegmentálása OCT felvételeken}{arg2}\\
+		\textbf{\huen{Szakdolgozatom témája}{Topic of my thesis}:}\\\noindent\hbox to .25in{}\huen{Mély konvolúciós hálók tanítása képfeldolgozási problémákra}{Creating of Deep Convolutional Neural Networks for Image\\\noindent\hbox to .25in{} Processing Problems}\\
+		\textbf{\huen{TDK-dolgozatom témája}{Topic of my TDK dissertation}:}\\
+		\noindent\hbox to .25in{}\huen{Hiperreflektív pontok szegmentálása OCT felvételeken}{Segmentation of Hyperreflective Foci on OCT Images}\\
 		\divider
-		\cvevent{Webdesigner}{József Attila Gimnázium}{2014. 04. 17. -- 2015. 02. 19.}{Monor \hspace{2em} \href{https://github.com/tasigabi97/cv/blob/main/webdesigner_certificate.jpg}{\faFileImage}}
-		124 órás akkreditált képzés (HTML\slash CSS\slash JavaScript) 95\%-os eredménnyel.\\	
+		\cvevent{Webdesigner}{\huen{József Attila Gimnázium}{József Attila High School}}{\huen{2014. 04. 17. -- 2015. 02. 19.}{17 Apr 2014 -- 19 Feb 2015}}{Monor \hspace{2em} \href{https://github.com/tasigabi97/cv/blob/main/webdesigner_certificate.jpg}{\faFileImage}}
+		\huen{124 órás akkreditált képzés (HTML\slash CSS\slash JavaScript) 95\%-os eredménnyel.}{124-hour accredited course (HTML\slash CSS\slash JavaScript), 95\% result}\\	
 	\switchcolumn
 		\cvsection{\huen{Életfilozófiám}{My Life Philosophy}}
 		
 		\begin{quote}
-			``Bármikor beüthet a siker, ha kellő ideig kitartunk''
+			``\huen{Bármikor beüthet a siker, ha kellő ideig kitartunk}{Success is walking from failure to failure with no loss of enthusiasm.}''
 		\end{quote}
 		
 		\cvsection{\huen{{\Large Amikre büszke vagyok}}{Most Proud of}}
 		
-		\cvachievement{\faTrophy}{\huen{TDK 2020. tavasz}{arg2}}{\huen{II. hely és Morgan Stanley különdíj}{arg2} \href{https://www.inf.u-szeged.hu/kutatas/konferenciak/tdk-2020-tavasz}{\faLink}}
+		\cvachievement{\faTrophy}{\huen{TDK 2020. tavasz}{TDK Spring 2020}}{\huen{II. hely és Morgan Stanley különdíj}{2nd place and Morgan Stanley special award} \href{https://www.inf.u-szeged.hu/kutatas/konferenciak/tdk-2020-tavasz}{\faLink}}
 		\divider\\
-		\cvachievement{\faGraduationCap}{\huen{Jeles diploma}{arg2}}{\huen{196 kredit és 4,74-es átlag}{arg2} \href{https://github.com/tasigabi97/cv/blob/main/degree_certificate_en.jpg}{\faFileImage}}\\
+		\cvachievement{\faGraduationCap}{\huen{Jeles diploma}{Excellent degree}}{\huen{196 kredit és 4,74-es átlag}{196 credit and 4.74 average} \href{https://github.com/tasigabi97/cv/blob/main/degree_certificate_en.jpg}{\faFileImage}}\\
 		\medskip
-		\cvsection{\huen{{\Large hobbi és érdeklődés}}{arg2}}
+		\cvsection{\huen{{\Large hobbi és érdeklődés}}{{\Large hobbies and interests}}}
 		\wheelchart{1cm}{0.2cm}{%
 			4/8em/accent!70/{\huen{Számítógépes\\látás}{Computer\\vision}},
 			3/8em/accent!40/{Raspberry Pi 4},
@@ -119,22 +122,31 @@
 			1/10em/accent/{Docker},
 			2/6em/accent!10/{Linux}
 		}
-		\cvsection{\huen{kompetenciák}{arg2}}
+		\cvsection{\huen{kompetenciák}{competences}}
 		\cvtag{Latex}
 		\cvtag{MS Office}
 		\cvtag{Linux \& Windows}\\
 		\divider\smallskip\\
-		\cvtag{\huen{Jó kommunikációs készség}{arg2}}
-		\cvtag{\huen{Tanulékonyság}{arg2}}
-		\cvtag{\huen{Pontosság}{arg2}}
-		\cvtag{\huen{Csapatjátékos}{arg2}}
-		\cvtag{\huen{Rugalmasság}{arg2}}
-		\cvtag{\huen{Terhelhetőség}{arg2}}
-		\cvtag{\huen{Motivált}{arg2}}\\
-		\cvtag{\huen{Önálló munkára való képesség}{arg2}}\\
+		\huen{
+			\cvtag{Jó kommunikációs készség}			\cvtag{Tanulékonyság}
+			\cvtag{Pontosság}
+			\cvtag{Csapatjátékos}
+			\cvtag{Rugalmasság}
+			\cvtag{Terhelhetőség}
+			\cvtag{Motivált}\\
+			\cvtag{Önálló munkára való képesség}}{%
+			\cvtag{Good communication skills}
+			\cvtag{Teachable}
+			\cvtag{Punctual}
+			\cvtag{Team player}
+			\cvtag{Flexible}
+			\cvtag{Motivated}
+			\cvtag{Autonomous}
+		}
+		\\
 		\divider\smallskip\\
-		\cvtag{\huen{Általános / orvosi képfeldolgozás ismerete}{arg2}}\\
-		\cvtag{\huen{Gépi tanulás ismerete}{arg2}}\\
+		\cvtag{\huen{Általános / orvosi képfeldolgozás ismerete}{General / medical image processing}}\\
+		\cvtag{\huen{Gépi tanulás ismerete}{Machine learning}}\\
 		\cvsection{\huen{Nyelvek}{Languages}}
 		\cvskill{\huen{Angol}{English} (B2\slash telc) \href{https://github.com/tasigabi97/cv/blob/main/language_certificate.jpg}{\faFileImage}}{3}
 		\divider
