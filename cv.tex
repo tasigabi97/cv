@@ -2,7 +2,7 @@
 %http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf
 %pdflatex -> biber -> pdflatex -> pdflatex
 \documentclass[10pt,a4paper,ragged2e,withhyper]{AltaCV/altacv}
-\newif\ifEN\ENfalse
+% We need the EN variable here, but we defined it in the cv_en.tex/cv_hu.tex files.
 \newcommand{\huen}[2]{\ifEN#2\else#1\fi}
 \ifEN
 \else
@@ -66,10 +66,9 @@
 		\locationandmailaddress{\huen{1115 , Ballagi Mór utca 3. 2/14.}{3 Ballagi Mór Street, Budapest 1115}}
 		\email{gabor.tasnadi@evosoft.com}
 		\phone{+36 70 660 4792}
-		\linkedin{\href{https://www.linkedin.com/in/tasnadigabor/}{tasnadigabor}}
-		\github{\href{https://github.com/tasigabi97/cv}{tasigabi97/cv}}
+		\linkedin{tasnadigabor}
+		\github{tasigabi97/cv}
 		\languag{\huen{\href{https://github.com/tasigabi97/cv/blob/main/cv_en.pdf}{angolul}}{\href{https://github.com/tasigabi97/cv/blob/main/cv_hu.pdf}{hungarian}}}
-		
 	}
 	\makecvheader
 	%\AtBeginEnvironment{itemize}{\small}
